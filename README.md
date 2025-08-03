@@ -1,1 +1,0 @@
-# Aerosim: Aerospace Simulation Suite
