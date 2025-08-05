@@ -22,7 +22,7 @@ trajectory = []
 time = 0.0
 while time <= SIM_TIME:
     trajectory.append((time, *state))
-    state = update_state(state, thrust, angle, TIME_STEP)
+    state = update_state(MASS, GRAVITY, state, thrust, angle, TIME_STEP)
     time += TIME_STEP
 
 # Plotting the trajectory
@@ -34,4 +34,4 @@ plt.title('Missle Trajectory')
 plt.xlabel('X Position (m)')
 plt.ylabel('Y Position (m)')
 plt.grid(True)
-plt.show()
+plt.savefig('trajectory.png')
