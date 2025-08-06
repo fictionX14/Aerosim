@@ -33,10 +33,10 @@ pip install -r requirements.txt
 - `dynamics.py` — Contains the `update_state` function for physics calculations
 - `requirements.txt` — Python dependencies
 
-## Extending the Project
+## Path Forward/ Work in progress
 - Add new modules for guidance, navigation, or control algorithms
 - Replace static parameters with user input or GUI controls
-- Implement real-time or interactive visualization using Tkinter, PyQt, or web dashboards
+- Implement real-time or interactive visualization
 
 ## Example Output
 ![Missile Trajectory](trajectory.png)
