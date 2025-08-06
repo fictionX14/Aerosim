@@ -1,19 +1,13 @@
 # main.py
 
+from config import MASS, GRAVITY, TIME_STEP, SIM_TIME, THRUST, ANGLE
 from dynamics import update_state
 import matplotlib.pyplot as plt
 
-#Constants
-
-MASS = 1.0  # kg
-GRAVITY = 9.81  # m/s^2 
-TIME_STEP = 0.1  # seconds
-SIM_TIME = 10.0  # seconds
-
-
-state = [0.0, 0.0, 0.0, 0.0]
-thrust = 20.0  # N
-angle = 45.0  # degrees
+#initial state: [x, y, vx, vy]
+# x and y are positions, vx and vy are velocities
+# Initializing state
+state = [0.0, 0.0, 0.0, 0.0] 
 
 # Logging data for plotting
 trajectory = []
@@ -22,7 +16,7 @@ trajectory = []
 time = 0.0
 while time <= SIM_TIME:
     trajectory.append((time, *state))
-    state = update_state(MASS, GRAVITY, state, thrust, angle, TIME_STEP)
+    state = update_state(MASS, GRAVITY, state, THRUST, ANGLE, TIME_STEP)
     time += TIME_STEP
 
 # Plotting the trajectory
