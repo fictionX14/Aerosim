@@ -1,2 +1,6 @@
-__pycache__/\n*.log\n.env
+__pycache__/
+*.pyc
+.venv/
 venv/
+*.png
+*.csv
